@@ -14,8 +14,8 @@
             "dest": "/static/$1"
         },
         {
-            "src": "/media/(.*)",  // Route for serving media files
-            "dest": "/media/$1"    // Destination directory for media files
+            "src": "/media/(.*)", 
+            "dest": "/media/$1"    
         },
         {
             "src": "/(.*)",
