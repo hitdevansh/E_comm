@@ -10,8 +10,8 @@
         "config": { "distDir": "staticfiles_build" }
     }],
     "routes": [{
-            "src": "/app/static/(.*)",
-            "dest": "/app/static/$1"
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
         },
         {
             "src": "/(.*)",
