@@ -70,7 +70,7 @@ class Product(models.Model):
     description = models.TextField()
     brand = models.CharField(max_length=100)
     category = models.CharField(choices=CATEGORY_CHOICE, max_length=2)
-    product_image = models.ImageField(upload_to='productimg')
+    product_image = models.ImageField(upload_to="productimg/")
     gender = models.CharField(choices=GENDER_CHOICES, max_length=1, blank=True, null=True)
 
     def __str__(self):
