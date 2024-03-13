@@ -36,8 +36,10 @@ urlpatterns = [
     path('bottomwear/<slug:data>', views.bottomwear, name='bottomweardata'),
     
     path('accounts/login/', auth_views.LoginView.as_view(template_name = 'app/login.html',authentication_form=LoginForm),name ='login'),
-    path('logout/', auth_views.LogoutView.as_view(next_page='login'),name ='logout'),
-    
+    # path('logout/', auth_views.LogoutView.as_view(next_page='login'),name ='logout'),
+
+    path('logout/', auth_views.LogoutView.as_view(next_page='/accounts/login/'), name='logout'),
+
     path('passwordchange/', auth_views.PasswordChangeView.as_view(template_name = 'app/passwordchange.html',form_class=CustomPasswordChangeForm,success_url='/passwordchangedone/'), name='passwordchange'),
     path('passwordchangedone/',auth_views.PasswordChangeView.as_view(template_name='app/passwordchangedone.html'),name='passwordchangedone'),
    
